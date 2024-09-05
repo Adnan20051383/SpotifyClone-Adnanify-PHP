@@ -1,0 +1,230 @@
+:root {
+    --spotify-dark: #121212;
+    --spotify-green: #1db954;
+    --spotify-light-green: #1ed760;
+    --spotify-gray: #535353;
+    --spotify-light-gray: #b3b3b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--spotify-dark);
+    color: var(--spotify-light-gray);
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: var(--spotify-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--spotify-green);
+    margin-bottom: 30px;
+}
+.logo a {
+    color: var(--spotify-green);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-links a {
+    color: var(--spotify-light-gray);
+    text-decoration: none;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+.active-nav-link {
+    background-color: var(--spotify-dark) ;
+    color: var(--spotify-green) !important;
+}
+
+.nav-links a:hover {
+    background-color: var(--spotify-dark);
+    color: var(--spotify-green);
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--spotify-green);
+    margin-bottom: 20px;
+}
+
+.table-section {
+    margin-bottom: 40px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: var(--spotify-gray);
+    color: var(--spotify-light-gray);
+}
+
+.admin-table td {
+    background-color: var(--spotify-dark);
+    color: var(--spotify-light-gray);
+    border-bottom: 1px solid var(--spotify-gray);
+}
+
+.delete-btn {
+    background-color: var(--spotify-green);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: var(--spotify-light-green);
+}
+.add-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+
+}
+.btn-outline-success:hover {
+    background-color: var(--spotify-green);
+}
+.form-container {
+    margin: 0 auto;
+    background-color: var(--spotify-gray);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    color: var(--spotify-green);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.music-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: var(--spotify-light-gray);
+}
+
+input[type="text"],
+input[type="date"],
+select,
+input[type="file"], textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--spotify-light-gray);
+    border-radius: 5px;
+    background-color: var(--spotify-dark);
+    color: var(--spotify-light-gray);
+}
+textarea {
+    resize: vertical; 
+    min-height: 100px;
+    font-family: inherit;
+}
+textarea::placeholder {
+    color: var(--spotify-light-gray);
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+input::placeholder {
+    color: var(--spotify-light-gray);
+}
+
+.add-btn {
+    padding: 10px;
+    background-color: var(--spotify-green);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: var(--spotify-light-green);
+}
+
+select {
+    appearance: none;
+    background-color: var(--spotify-dark) !important;
+    color: var(--spotify-light-gray) !important;
+    padding: 10px;
+}
+
+.selectize-input {
+    background-color: var(--spotify-dark) !important;
+    color: var(--spotify-light-gray) !important;
+    border: 1px solid var(--spotify-light-gray) !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    box-shadow: none !important;
+}
+.selectize-dropdown {
+    background-color: var(--spotify-dark) !important;
+    border: 1px solid var(--spotify-light-gray) !important;
+    color: var(--spotify-light-gray) !important;
+}
+
+.selectize-dropdown .selectize-option {
+    background-color: var(--spotify-dark) !important;
+    color: var(--spotify-light-gray) !important;
+    padding: 10px !important;
+}
+.selectize-dropdown .selectize-option:hover {
+    background-color: var(--spotify-gray) !important;
+}
+.selectize-input.focus {
+    border-color: var(--spotify-green) !important;
+}
+.selectize-control {
+    all: unset;
+}
